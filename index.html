@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+
+```
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f4f4f4;
+    }
+
+    header {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    nav {
+        background: #555;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav a {
+        color: white;
+        margin: 10px;
+        text-decoration: none;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .project {
+        background: white;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 5px;
+    }
+
+    button {
+        padding: 10px;
+        background: #333;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    .profile {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+header {
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+button:hover {
+    background: #ff9800;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+html {
+    scroll-behavior: smooth;
+}
+@media (max-width: 600px) {
+    header {
+        padding: 30px 10px;
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background: #22c55e;
+}
+
+button:hover {
+    background: #16a34a;
+}
+</style>
+```
+
+</head>
+
+<body>
+
+<header>
+    <h1>Amon Niyorukundo</h1>
+    <img src="https://photos.google.com/memory/featured/AF1QipOHjka4hhxJjoen5py5WNtmgZdOCfnapOAj13B58A" class="profile">
+    <p>ICT Student | Web Developer</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>I am learning HTML, CSS, and JavaScript. I love building websites.</p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+```
+<div class="project">
+    <h3>Project 1</h3>
+    <p>Simple website using HTML & CSS</p>
+</div>
+
+<div class="project">
+    <h3>Project 2</h3>
+    <p>JavaScript interactive page</p>
+</div>
+```
+
+</section>
+
+<section id="contact">
+    <h2>Contact:0793232342</h2>
+    <button onclick="showMessage()">Say Hello</button>
+</section>
+
+<script>
+function showMessage() {
+    alert("Hello! Thanks for visiting my portfolio.");
+}
+</script>
+<h2>Contact Me</h2>
+
+<form action="https://formspree.io/f/your-id" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <br><br>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <br><br>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <br><br>
+    <button type="submit">Send</button>
+</form>
+
+</body>
+</html>
