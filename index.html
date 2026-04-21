@@ -104,6 +104,16 @@ button {
 button:hover {
     background: #16a34a;
 }
+.fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 </style>
 ```
 
@@ -113,7 +123,7 @@ button:hover {
 
 <header>
     <h1>Amon Niyorukundo</h1>
-    <img src="https://photos.google.com/memory/featured/AF1QipOHjka4hhxJjoen5py5WNtmgZdOCfnapOAj13B58A" class="profile">
+    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" class="profile">
     <p>ICT Student | Web Developer</p>
 </header>
 
@@ -122,6 +132,12 @@ button:hover {
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
 </nav>
+<section id="skills">
+    <h2>My Skills</h2>
+    <p>HTML</p>
+    <p>CSS</p>
+    <p>JavaScript</p>
+</section>
 
 <section id="about">
     <h2>About Me</h2>
@@ -155,6 +171,16 @@ function showMessage() {
     alert("Hello! Thanks for visiting my portfolio.");
 }
 </script>
+<script>
+window.addEventListener("scroll", function() {
+    document.querySelectorAll(".fade").forEach(el => {
+        let top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight) {
+            el.classList.add("show");
+        }
+    });
+});
+</script>
 <h2>Contact Me</h2>
 
 <form action="https://formspree.io/f/your-id" method="POST">
@@ -166,6 +192,22 @@ function showMessage() {
     <br><br>
     <button type="submit">Send</button>
 </form>
+<a href="#" download>Download CV</a>
+<section>
+    <h2>Follow Me</h2>
+    <p>
+        <a href="#">GitHub</a> |
+        <a href="#">LinkedIn</a> |
+        <a href="#">Twitter</a>
+    </p>
+</section>
+<div style="background:#ddd; border-radius:5px;">
+    <div style="width:80%; background:#22c55e; color:white;">HTML 80%</div>
+</div>
+<section class="fade"></section>
+<footer style="background:#333; color:white; text-align:center; padding:10px;">
+    <p>© 2026 Amon Niyorukundo | All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
